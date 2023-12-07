@@ -7,8 +7,6 @@ import { rootSchema } from './schemas/schema.js';
 const app = express();
 const graphQLPlayground = expressPlayground.default;
 
-dotenv.config();
-
 app.use(cors());
 
 app.all('/graphql', createHandler({ schema: rootSchema }));
